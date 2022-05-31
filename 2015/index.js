@@ -5,3 +5,11 @@ let down = (input1.match(/\)/g) || []).length;
 
 console.log(up-down);
 
+let level = 0;
+for (let i = 0; i < input1.length; i++) {
+    level += (input1[i] == "(" ? 1 : -1);
+    if (level < 0) {
+        console.log(i+1);
+        break;
+    };
+};
